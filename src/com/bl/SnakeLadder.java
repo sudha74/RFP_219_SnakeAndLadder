@@ -12,21 +12,27 @@ public class SnakeLadder {
         dieNumber = rollDie();
         System.out.println("Die Number : " + dieNumber);
 
-        option = checkOption();
+        while (position < 100) {
+            option = checkOption();
 
-        switch (option) {
-            case LADDER_OPTION:
-                System.out.println("ladder option");
-                position += dieNumber;
-            case SNAKE_OPTION:
-                System.out.println("snake option");
-                position -= dieNumber;
-                break;
-            default:
-                System.out.println("No play option");
-                break;
+            switch (option) {
+                case LADDER_OPTION:
+                    System.out.println("ladder option");
+                    position += dieNumber;
+                case SNAKE_OPTION:
+                    System.out.println("snake option");
+                    position -= dieNumber;
+                    break;
+                default:
+                    System.out.println("No play option");
+                    break;
+            }
+
+            if (position < 0) {
+                position = 0;
+            }
+            System.out.println("current position : " + position);
         }
-        System.out.println("current position : " + position);
     }
 
     static int rollDie() {
