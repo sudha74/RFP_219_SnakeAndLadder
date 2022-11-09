@@ -7,10 +7,12 @@ public class SnakeLadder {
 
     public static void main(String[] args) {
         int dieNumber, option;
+        int dieCount = 0;
         int position = START_POSITION;
 
         while (position < 100) {
             dieNumber = rollDie();
+            dieCount++;
             System.out.println("Die Number : " + dieNumber);
 
 
@@ -36,6 +38,7 @@ public class SnakeLadder {
             }
             System.out.println("current position : " + position);
         }
+        System.out.println("Number of times die played = " + dieCount);
     }
 
     static int rollDie() {
