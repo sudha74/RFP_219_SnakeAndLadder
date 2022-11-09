@@ -1,7 +1,10 @@
 package com.bl;
 
 public class SnakeLadder {
+    static final int START_POSITION = 0;
+
     public static void main(String[] args) {
-        System.out.println("Welcome to Snake and Ladder Game");
+        int position = START_POSITION;
+        System.out.println("current position : " + position);
     }
 }
